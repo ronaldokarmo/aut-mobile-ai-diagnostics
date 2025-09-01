@@ -15,36 +15,44 @@ Este projeto demonstra a automação de testes para aplicativos mobile Android u
 ## 📂 Estrutura do Projeto
 
 ```
-e:\aut-mobile-appium-robot-framework-python\
-├── .gitignore
-├── README.md
-├── requirements.txt
-├── run_test.bat
-├── .venv/
-├── .vscode/
-├── configs/
-│   ├── android_config.json
-│   ├── emulator_config.json
-│   └── ios_config.json
-├── pages/
-│   ├── login_page.py
-├── resources/
-│   ├── keywords/
-│   │   └── login_keywords.robot
-│   ├── locators/
-│   └── variables/
-│       └── global_variables.robot
-├── results/
-├── tests/
-│   ├── diagnostico_android.robot
-│   ├── android/
-│   │   ├── test_login.robot
-│   │   └── test_new_login.robot
-│   └── ios/
-└── utils/
-    ├── driver_factory.py
-    ├── helpers.py
-    ├── inspector.py
+e:\aut-mobile-ai-diagnostics\
+├───.gitignore
+├───.gitingnore
+├───.pylintrc
+├───README.md
+├───requirements.txt
+├───run_test.bat
+├───.git\...
+├───.venv\...
+├───.vscode\
+│   └───settings.json
+├───ai_diagnostics\
+│   └───locator_analyzer.py
+├───locators\
+│   └───locator_repository.json
+├───logs\
+│   └───locator_failures.json
+├───modules\
+│   ├───__init__.py
+│   ├───locator_logger.py
+│   └───__pycache__\
+├───resources\
+│   ├───capabilities.json
+│   ├───keywords.robot
+│   └───variables.robot
+├───results\
+│   ├───output\...
+│   └───steps\...
+├───tests\
+│   ├───test_ai_login.robot
+│   ├───android\
+│   │   └───test_new_login.robot
+│   └───ios\
+└───utils\
+    ├───__init__.py
+    ├───inspector.py
+    └───__pycache__\
+
 ```
 
 ## ⚙️ Configuração do Ambiente
@@ -246,8 +254,8 @@ flowchart TD
     B --> C[Coleta de Logs de Falhas de Locators]
     B --> D[Captura do Page Source via Appium]
     C --> E[Mapeamento de Locators para o Repositório]
-    D --> F[Extração de Candidatos (resource-id) do Page Source]
-    E --> G[Algoritmo de Similaridade (SequenceMatcher)]
+    D --> F[Extração de Candidatos]
+    E --> G[Algoritmo de Similaridade]
     F --> G
     G --> H[Identificação de Locators com Alta Similaridade]
     H --> I[Atualização Automática do locator_repository.json]
