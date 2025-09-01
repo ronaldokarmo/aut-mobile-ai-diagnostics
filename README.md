@@ -304,7 +304,7 @@ flowchart LR
 
 ## 🖼 Exemplo de Relatório HTML
 
-![Mockup do Relatório HTML Interativo](/img/report-html.jpg
+![Mockup do Relatório HTML Interativo](/img/report-html.jpg)
 
 > *Mockup ilustrativo do relatório gerado, com gráfico de falhas, tabela de sugestões, alterações no repositório e botão de alternância claro/escuro.*
 
