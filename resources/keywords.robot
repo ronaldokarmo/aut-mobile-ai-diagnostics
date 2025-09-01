@@ -88,15 +88,7 @@ Enter Smart Password Intelligence
         Run Keyword If    ${status}    Evaluate    modules.locator_logger.log_success("${button_id}")    modules.locator_logger
         Run Keyword If    ${status}    Log    Digitou ${digit} com botão ${locator}
     END
-    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
-
-Capture Page Screenshot Steps
-    [Documentation]
-    [Arguments]    ${evento}
-    ${STEP_COUNTER}=    Evaluate    ${STEP_COUNTER} + 1
-    ${formatted_step_counter}=    Evaluate    f'{${STEP_COUNTER}:02d}'
-    ${filename}=    Set Variable    results/steps/step_${formatted_step_counter}_${evento}.png
-    Capture Page Screenshot    ${filename}
+    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
 
 Click Element Intelligence
     [Documentation]    Clica em um elemento.
@@ -105,7 +97,7 @@ Click Element Intelligence
     ${status}=     Run Keyword And Return Status    Wait Until Element Is Visible    ${locator}    timeout=${wait-small}
     Run Keyword If    not ${status}    Evaluate    modules.locator_logger.log_failure("Login por Agência", "${locator}", "Elemento não visível")    modules.locator_logger
     Run Keyword If    ${status}    Element Should Be Enabled    ${locator}
-    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
+    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
     Run Keyword If    ${status}    Click Element    ${locator}
     Run Keyword If    ${status}    Evaluate    modules.locator_logger.log_success("${locator_key}")    modules.locator_logger
     Run Keyword If    ${status}    Log    Clicou no elemento: ${locator_key}
@@ -118,7 +110,7 @@ Input Text Intelligence
     Run Keyword If    not ${status}    Evaluate    modules.locator_logger.log_failure("Login por Agência", "${locator}", "Campo não visível")    modules.locator_logger
     Run Keyword If    ${status}    Click Element    ${locator}
     Run Keyword If    ${status}    Input Text    ${locator}    ${texto}
-    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
+    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
     Run Keyword If    ${status}    Evaluate    modules.locator_logger.log_success("${locator_key}")    modules.locator_logger
     Run Keyword If    ${status}    Log    Preencheu o campo: ${locator_key} com valor: ${texto}
 
@@ -128,7 +120,7 @@ Wait Until Element Is Visible Intelligence
     ${locator}=    Evaluate    modules.locator_logger.get_best_locator("${locator_key}")    modules.locator_logger
     ${status}=     Run Keyword And Return Status    Wait Until Element Is Visible    ${locator}    timeout=${wait-small}
     Run Keyword If    not ${status}    Evaluate    modules.locator_logger.log_failure("Login por Agência", "${locator}", "Elemento não visível")    modules.locator_logger
-    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
+    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
     Run Keyword If    ${status}    Evaluate    modules.locator_logger.log_success("${locator_key}")    modules.locator_logger
     Run Keyword If    ${status}    Log    Elemento visível: ${locator_key}
 
@@ -137,7 +129,7 @@ Verificar Texto na Tela Inteligente
     [Arguments]    ${texto_esperado}    ${evento}=None
     ${status}=     Run Keyword And Return Status    Wait Until Page Contains    ${texto_esperado}    timeout=${wait-large}
     Run Keyword If    not ${status}    Evaluate    modules.locator_logger.log_failure("Login por Agência", "texto=${texto_esperado}", "Texto não encontrado na tela")    modules.locator_logger
-    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
+    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
     Run Keyword If    ${status}    Evaluate    modules.locator_logger.log_success("texto=${texto_esperado}")    modules.locator_logger
     Run Keyword If    ${status}    Log    Texto encontrado na tela: ${texto_esperado}
 
@@ -149,7 +141,7 @@ Verificar Estado de Elemento Inteligente
     Run Keyword If    not ${status}    Evaluate    modules.locator_logger.log_failure("Login por Agência", "${locator}", "Elemento não visível para verificação de estado")    modules.locator_logger
     Run Keyword If    ${status}    Run Keyword If    '${estado_esperado}' == 'enabled'    Element Should Be Enabled    ${locator}
     Run Keyword If    ${status}    Run Keyword If    '${estado_esperado}' == 'disabled'    Element Should Be Disabled    ${locator}
-    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
+    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
     Run Keyword If    ${status}    Evaluate    modules.locator_logger.log_success("${locator_key}")    modules.locator_logger
     Run Keyword If    ${status}    Log    Estado verificado: ${estado_esperado} para ${locator_key}
 
@@ -161,7 +153,7 @@ Selecionar Item de Lista Inteligente
     Run Keyword If    not ${status}    Evaluate    modules.locator_logger.log_failure("Login por Agência", "${xpath}", "Item de lista '${texto_item}' não visível")    modules.locator_logger
     Run Keyword If    ${status}    Click Element    ${xpath}
     Run Keyword If    ${status}    Evaluate    modules.locator_logger.log_success("texto=${texto_item}")    modules.locator_logger
-    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
+    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
     Run Keyword If    ${status}    Log    Selecionou item da lista: ${texto_item}
 
 Rolar Até Elemento Inteligente
@@ -172,7 +164,7 @@ Rolar Até Elemento Inteligente
     Run Keyword If    not ${status}    Scroll To Element    ${locator}
     ${status_final}=    Run Keyword And Return Status    Wait Until Element Is Visible    ${locator}    timeout=${wait-large}
     Run Keyword If    not ${status_final}    Evaluate    modules.locator_logger.log_failure("Login por Agência", "${locator}", "Elemento não visível após rolagem")    modules.locator_logger
-    Run Keyword If    ${status_final}    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
+    Run Keyword If    ${status_final}    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
     Run Keyword If    ${status_final}    Evaluate    modules.locator_logger.log_success("${locator_key}")    modules.locator_logger
     Run Keyword If    ${status_final}    Log    Rolou até o elemento: ${locator_key}
 
@@ -182,7 +174,7 @@ Verificar Mensagem de Erro Inteligente
     ${xpath}=    Set Variable    xpath=//*[contains(@text, "${mensagem_esperada}")]
     ${status}=   Run Keyword And Return Status    Wait Until Element Is Visible    ${xpath}    timeout=${wait-large}
     Run Keyword If    not ${status}    Evaluate    modules.locator_logger.log_failure("Login por Agência", "${xpath}", "Mensagem de erro '${mensagem_esperada}' não visível")    modules.locator_logger
-    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
+    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
     Run Keyword If    ${status}    Evaluate    modules.locator_logger.log_success("mensagem=${mensagem_esperada}")    modules.locator_logger
     Run Keyword If    ${status}    Log    Mensagem de erro visível: ${mensagem_esperada}
 
@@ -198,7 +190,7 @@ Validar Tela com Múltiplos Elementos Inteligente
         Run Keyword If    ${status}    Evaluate    modules.locator_logger.log_success("${locator_key}")    modules.locator_logger
         Run Keyword If    ${status}    Log    Elemento visível: ${locator_key}
     END
-    Run Keyword If    ${todos_visiveis}    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
+    Run Keyword If    ${todos_visiveis}    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
     Run Keyword If    ${todos_visiveis}    Log    Todos os elementos da tela estão visíveis
     Run Keyword If    not ${todos_visiveis}    Fail    Um ou mais elementos da tela não estão visíveis
 
@@ -207,7 +199,7 @@ Validar Ausência de Elemento Inteligente
     [Arguments]    ${locator_key}    ${evento}=None
     ${locator}=    Evaluate    modules.locator_logger.get_best_locator("${locator_key}")    modules.locator_logger
     ${status}=     Run Keyword And Return Status    Wait Until Element Is Not Visible    ${locator}    timeout=${wait-large}
-    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
+    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
     Run Keyword If    ${status}    Log    Elemento ausente como esperado: ${locator_key}
     Run Keyword If    not ${status}    Evaluate    modules.locator_logger.log_failure("Login por Agência", "${locator}", "Elemento ainda visível, mas deveria estar ausente")
 
@@ -229,7 +221,7 @@ Validar Tempo de Carregamento de Tela Inteligente
     ${status}=     Run Keyword And Return Status    Wait Until Element Is Visible    ${locator}    timeout=${wait-large}
     ${fim}=        Get Time    epoch
     ${duracao}=    Evaluate    ${fim} - ${inicio}
-    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
+    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
     Run Keyword If    ${status}    Evaluate    modules.locator_logger.log_success("${locator_key}")    modules.locator_logger
     Run Keyword If    ${status}    Log    Tela carregada em ${duracao} segundos: ${locator_key}
     Run Keyword If    ${duracao} > ${limite_segundos}    Log    ⚠️ Tempo de carregamento acima do limite: ${duracao}s > ${limite_segundos}s    level=WARN
@@ -244,7 +236,7 @@ Validar Estado Visual de Elemento Inteligente
     Run Keyword If    not ${status}    Evaluate    modules.locator_logger.log_failure("Login por Agência", "${locator}", "Elemento não visível para validação visual")    modules.locator_logger
     Run Keyword If    ${status}    ${valor_atual}=    Get Element Attribute    ${locator}    ${atributo}
     Run Keyword If    ${status}    Should Be Equal    ${valor_atual}    ${valor_esperado}
-    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
+    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
     Run Keyword If    ${status}    Evaluate    modules.locator_logger.log_success("${locator_key}")    modules.locator_logger
     Run Keyword If    ${status}    Log    Estado visual validado: ${atributo} = ${valor_esperado}
 
@@ -256,7 +248,7 @@ Validar Conteúdo Dinâmico Inteligente
     Run Keyword If    not ${status}    Evaluate    modules.locator_logger.log_failure("Login por Agência", "${locator}", "Elemento não visível para validação de conteúdo")    modules.locator_logger
     Run Keyword If    ${status}    ${conteudo_atual}=    Get Text    ${locator}
     Run Keyword If    ${status}    Should Be Equal    ${conteudo_atual}    ${conteudo_esperado}
-    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
+    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
     Run Keyword If    ${status}    Evaluate    modules.locator_logger.log_success("${locator_key}")    modules.locator_logger
     Run Keyword If    ${status}    Log    Conteúdo validado: ${conteudo_atual}
 
@@ -265,7 +257,7 @@ Validar Item em Lista Inteligente
     [Arguments]    ${texto_item}    ${evento}=None
     ${xpath}=    Set Variable    xpath=//android.widget.TextView[contains(@text, "${texto_item}")]
     ${status}=   Run Keyword And Return Status    Wait Until Element Is Visible    ${xpath}    timeout=${wait-large}
-    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
+    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
     Run Keyword If    ${status}    Evaluate    modules.locator_logger.log_success("item_lista=${texto_item}")    modules.locator_logger
     Run Keyword If    ${status}    Log    Item encontrado na lista: ${texto_item}
     Run Keyword If    not ${status}    Evaluate    modules.locator_logger.log_failure("Login por Agência", "${xpath}", "Item '${texto_item}' não encontrado na lista")    modules.locator_logger
@@ -275,7 +267,7 @@ Validar Notificação Inteligente
     [Arguments]    ${mensagem_esperada}    ${evento}=None
     ${xpath}=    Set Variable    xpath=//android.widget.Toast[contains(@text, "${mensagem_esperada}")]
     ${status}=   Run Keyword And Return Status    Wait Until Element Is Visible    ${xpath}    timeout=${wait-large}
-    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
+    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
     Run Keyword If    ${status}    Evaluate    modules.locator_logger.log_success("notificacao=${mensagem_esperada}")    modules.locator_logger
     Run Keyword If    ${status}    Log    Notificação exibida: ${mensagem_esperada}
     Run Keyword If    not ${status}    Evaluate    modules.locator_logger.log_failure("Login por Agência", "${xpath}", "Notificação '${mensagem_esperada}' não exibida")    modules.locator_logger
@@ -288,7 +280,7 @@ Validar Comportamento Após Rotação Inteligente
     Rotate Screen    ${orientacao}
     Sleep    2s
     ${status}=     Run Keyword And Return Status    Wait Until Element Is Visible    ${locator}    timeout=${wait-large}
-    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot Steps    ${evento}
+    Run Keyword If    ${status}    Run Keyword If    ${evento}    Capture Page Screenshot    ${evento}
     Run Keyword If    ${status}    Evaluate    modules.locator_logger.log_success("${locator_key}")    modules.locator_logger
     Run Keyword If    ${status}    Log    Elemento visível após rotação (${orientacao}): ${locator_key}
     Run Keyword If    not ${status}    Evaluate    modules.locator_logger.log_failure("Login por Agência", "${locator}", "Elemento não visível após rotação (${orientacao})")    modules.locator_logger
