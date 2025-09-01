@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Keywords for login functionality
+Documentation    Keywords personalizados para automação do app Itaú.
 Library          AppiumLibrary
 Library          JSONLibrary
 Library          OperatingSystem
