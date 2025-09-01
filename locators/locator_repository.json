@@ -1,0 +1,646 @@
+{
+    "app_itau_logo": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/segregate_image_logo",
+            "success_count": 165
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.ImageView[@resource-id='com.itau:id/segregate_image_logo']",
+            "success_count": 165
+        },
+        {
+            "strategy": "resource_id",
+            "value": "com.itau:id/segregate_image_logo",
+            "success_count": 165
+        },
+        {
+            "strategy": "id",
+            "value": "com.itau:id/segregate_title",
+            "success_count": 149
+        },
+        {
+            "strategy": "id",
+            "value": "com.itau:id/segregate_access_button",
+            "success_count": 149
+        }
+    ],
+    "app_itau_select_ambiente": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/segregate_config_selector_button",
+            "success_count": 363
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.TextView[@resource-id='com.itau:id/segregate_config_selector_button']",
+            "success_count": 363
+        },
+        {
+            "strategy": "resource_id",
+            "value": "com.itau:id/segregate_config_selector_button",
+            "success_count": 363
+        },
+        {
+            "strategy": "id",
+            "value": "com.itau:id/segregate_bottom_help_button",
+            "success_count": 324
+        },
+        {
+            "strategy": "id",
+            "value": "com.itau:id/segregate_access_button",
+            "success_count": 324
+        },
+        {
+            "strategy": "id",
+            "value": "com.itau:id/segregate_config_id_mobile",
+            "success_count": 324
+        }
+    ],
+    "app_itau_button_acesso": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/segregate_access_button",
+            "success_count": 238
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.Button[@content-desc='Acessar']",
+            "success_count": 238
+        },
+        {
+            "strategy": "resource_id",
+            "value": "com.itau:id/segregate_access_button",
+            "success_count": 195
+        }
+    ],
+    "app_itau_select_metodo_login": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/subtitle",
+            "success_count": 35
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.TextView[@resource-id='com.itau:id/subtitle']",
+            "success_count": 35
+        },
+        {
+            "strategy": "android uiautomator",
+            "value": "new UiSelector().resourceId('com.itau:id/subtitle')",
+            "success_count": 35
+        },
+        {
+            "strategy": "id",
+            "value": "com.itau:id/segregate_title",
+            "success_count": 35
+        },
+        {
+            "strategy": "id",
+            "value": "com.itau:id/buttonText",
+            "success_count": 35
+        },
+        {
+            "strategy": "id",
+            "value": "com.itau:id/editText",
+            "success_count": 31
+        }
+    ],
+    "app_itau_button_metodo_login": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/fbl_change_credentials",
+            "success_count": 0
+        },
+        {
+            "strategy": "resource_id",
+            "value": "com.itau:id/fbl_change_credentials",
+            "success_count": 0
+        },
+        {
+            "strategy": "android uiautomator",
+            "value": "new UiSelector().resourceId('com.itau:id/fbl_change_credentials')",
+            "success_count": 0
+        },
+        {
+            "strategy": "class_name",
+            "value": "android.widget.Button",
+            "success_count": 0
+        }
+    ],
+    "login_field_cpf": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/editText_cpf",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.EditText[@resource-id='com.itau:id/editText' and @text='CPF']",
+            "success_count": 0
+        },
+        {
+            "strategy": "accessibility_id",
+            "value": "CPF",
+            "success_count": 0
+        },
+        {
+            "strategy": "android uiautomator",
+            "value": "new UiSelector().resourceId('com.itau:id/editText_cpf')",
+            "success_count": 0
+        },
+        {
+            "strategy": "android uiautomator",
+            "value": "new UiSelector().text('CPF')",
+            "success_count": 0
+        }
+    ],
+    "login_field_agencia": [
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.EditText[@resource-id='com.itau:id/editText' and @text='agência']",
+            "success_count": 58
+        },
+        {
+            "strategy": "id",
+            "value": "com.itau:id/editText_agencia",
+            "success_count": 58
+        },
+        {
+            "strategy": "accessibility_id",
+            "value": "agência",
+            "success_count": 58
+        },
+        {
+            "strategy": "text",
+            "value": "Agência",
+            "success_count": 58
+        }
+    ],
+    "login_field_conta": [
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.EditText[@resource-id='com.itau:id/editText' and @text='conta']",
+            "success_count": 30
+        },
+        {
+            "strategy": "id",
+            "value": "com.itau:id/editText_conta",
+            "success_count": 30
+        },
+        {
+            "strategy": "accessibility_id",
+            "value": "conta",
+            "success_count": 30
+        },
+        {
+            "strategy": "text",
+            "value": "Conta",
+            "success_count": 30
+        },
+        {
+            "strategy": "android uiautomator",
+            "value": "new UiSelector().resourceId('com.itau:id/editText_conta')",
+            "success_count": 30
+        }
+    ],
+    "login_button_continuar": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/primary_button",
+            "success_count": 24
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.Button[@text='Continuar'] or //android.widget.Button[@content-desc='Continuar']",
+            "success_count": 24
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.Button[@content-desc='Continuar']",
+            "success_count": 24
+        },
+        {
+            "strategy": "accessibility_id",
+            "value": "continuar",
+            "success_count": 24
+        },
+        {
+            "strategy": "text",
+            "value": "Continuar",
+            "success_count": 24
+        }
+    ],
+    "login_display_instabilidades": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/alert or com.itau:id/alertBody",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.view.ViewGroup[@resource-id='com.itau:id/alert']",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.TextView[@resource-id='com.itau:id/alertBody'] and @text='Estamos com instabilidades. Tente entrar novamente']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Estamos com instabilidades. Tente entrar novamente",
+            "success_count": 0
+        }
+    ],
+    "main_display_habilitar_fido": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/txt_auth_fido_incentive_offer_title",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.TextView[@resource-id='com.itau:id/txt_auth_fido_incentive_offer_title']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Habilite sua digital para ter agilidade nos acessos do app",
+            "success_count": 0
+        }
+    ],
+    "main_button_habilitar_fido": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/ids_fbl_primaryButton",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.Button[@content-desc='Habilitar digital']",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.TextView[@resource-id='com.itau:id/buttonLabel' and @text='Habilitar digital']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Habilitar digital",
+            "success_count": 0
+        }
+    ],
+    "main_button_nao_habilitar_fido": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/ids_fbl_secondaryButton",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.Button[@content-desc='Não habilitar']",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.TextView[@resource-id='com.itau:id/buttonLabel' and @text='Não habilitar']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Não habilitar",
+            "success_count": 0
+        }
+    ],
+    "main_display_de_confirmacao_habilitar_fido": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/txt_auth_fido_bottom_sheet_title",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.TextView[@resource-id='com.itau:id/txt_auth_fido_bottom_sheet_title']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Tem certeza que não quer habilitar sua digital?",
+            "success_count": 0
+        }
+    ],
+    "main_button_de_confirmacao_nao_habilitar_fido": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/secondary_button",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.Button[@content-desc='Não habilitar']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Não habilitar",
+            "success_count": 0
+        }
+    ],
+    "main_button_de_confirmacao_habilitar_fido_fechar": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/buttonIcon",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.TextView[@resource-id='com.itau:id/buttonIcon']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "fechar",
+            "success_count": 0
+        }
+    ],
+    "main_button_de_confirmacao_habilitar_fido": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/primary_button",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.Button[@content-desc='Habilitar digital']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Habilitar digital",
+            "success_count": 0
+        }
+    ],
+    "main_display_ativar_localizacao": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/subtitle",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.TextView[@resource-id='com.itau:id/subtitle']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Ative a localização e complete suas camadas de proteção",
+            "success_count": 0
+        }
+    ],
+    "main_button_ativar_localizacao_continuar": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/btn_continue",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.Button[@content-desc='Continuar']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Continuar",
+            "success_count": 0
+        }
+    ],
+    "main_display_ativar_localizacao_permissao": [
+        {
+            "strategy": "id",
+            "value": "com.android.permissioncontroller:id/permission_message",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.TextView[@resource-id='com.android.permissioncontroller:id/permission_message']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Permitir que o app Itaú acesse a localização deste dispositivo?",
+            "success_count": 0
+        }
+    ],
+    "main_button_ativar_localizacao_durante_uso": [
+        {
+            "strategy": "id",
+            "value": "com.android.permissioncontroller:id/permission_allow_foreground_only_button",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_foreground_only_button']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Durante o uso do app",
+            "success_count": 0
+        }
+    ],
+    "main_display_ativar_notificaoes": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/tv_title",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.TextView[@resource-id='com.itau:id/tv_title']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "quer ter mais praticidade?",
+            "success_count": 0
+        }
+    ],
+    "main_button_ativar_notificaoes_ativar": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/primary_button",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.Button[@content-desc='Ativar']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Ativar",
+            "success_count": 0
+        }
+    ],
+    "main_button_permitir_notificaoes_ativar": [
+        {
+            "strategy": "id",
+            "value": "com.android.permissioncontroller:id/permission_message",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.TextView[@resource-id='com.android.permissioncontroller:id/permission_message']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Permitir que o app Itaú envie notificações?",
+            "success_count": 0
+        }
+    ],
+    "main_button_permitir_notificaoes_permitir": [
+        {
+            "strategy": "id",
+            "value": "com.android.permissioncontroller:id/permission_allow_button",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_button']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Permitir",
+            "success_count": 0
+        }
+    ],
+    "main_button_perfil_bancario": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/layerProfile",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.Button[@content-desc='perfil de Pmd']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "perfil de Pmd",
+            "success_count": 0
+        }
+    ],
+    "main_title_home_bancario": [
+        {
+            "strategy": "id",
+            "value": "com.itau:id/titleProducts",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.TextView[@content-desc='Meu Itaú']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Meu Itaú",
+            "success_count": 0
+        }
+    ],
+    "menu_seguranca": [
+        {
+            "strategy": "uiautomator",
+            "value": "new UiSelector().description('Segurança')",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.Button[@content-desc='Segurança']",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.TextView[@resource-id='com.itau:id/ids_shortcut_text' and @text='Segurança']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Segurança",
+            "success_count": 0
+        }
+    ],
+    "display_hub_seguranca": [
+        {
+            "strategy": "uiautomator",
+            "value": "new UiSelector().text('Acesse e personalize suas configurações de segurança')",
+            "success_count": 0
+        },
+        {
+            "strategy": "class",
+            "value": "android.widget.TextView",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.TextView[@text='Acesse e personalize suas configurações de segurança']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "Acesse e personalize suas configurações de segurança",
+            "success_count": 0
+        }
+    ],
+    "display_hub_seguranca_etapas_protecao": [
+        {
+            "strategy": "uiautomator",
+            "value": "new UiSelector().text('4 de 5 configurações')",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.view.View[@text='4 de 5 configurações']",
+            "success_count": 0
+        },
+        {
+            "strategy": "text",
+            "value": "4 de 5 configurações",
+            "success_count": 0
+        }
+    ],
+    "hub_seguranca_button_modo_protegido_etapas_protecao": [
+        {
+            "strategy": "text",
+            "value": "Modo Protegido   Mais proteção para o app em caso de roubo e furto",
+            "success_count": 0
+        },
+        {
+            "strategy": "id",
+            "value": "btn-modoProtegido",
+            "success_count": 0
+        },
+        {
+            "strategy": "uiautomator",
+            "value": "new UiSelector().resourceId('btn-modoProtegido')",
+            "success_count": 0
+        },
+        {
+            "strategy": "xpath",
+            "value": "//android.widget.Button[@resource-id='btn-modoProtegido']",
+            "success_count": 0
+        }
+    ],
+    "texto=Homologação AWS": [],
+    "login_password_field": [],
+    "com.itau:id/btn2": [],
+    "com.itau:id/btn3": [],
+    "com.itau:id/btn4": [],
+    "com.itau:id/btn1": [],
+    "id=com.itau:id/subtitle": []
+}

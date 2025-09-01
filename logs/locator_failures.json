@@ -1,0 +1,88 @@
+[
+    {
+        "locator": "app_itau_logo",
+        "page_source_file": "logs/page_source_1756696024.xml"
+    },
+    {
+        "locator": "id=com.itau:id/segregate_config_selector_button",
+        "page_source_file": "logs/page_source_1756696026.xml"
+    },
+    {
+        "timestamp": "2025-09-01T00:07:22.662471",
+        "test_name": "Login por AgÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Âªncia",
+        "locator": "login_password_field",
+        "error": "Elemento nÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o visÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­vel"
+    },
+    {
+        "locator": "login_password_field",
+        "page_source_file": "logs/page_source_1756696042.xml"
+    },
+    {
+        "timestamp": "2025-09-01T00:07:39.288875",
+        "test_name": "Login por AgÃƒÆ’Ã‚Âªncia",
+        "locator": "id=com.itau:id/primary_button",
+        "error": "Elemento nÃƒÆ’Ã‚Â£o visÃƒÆ’Ã‚Â­vel para verificaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o de estado"
+    },
+    {
+        "locator": "main_button_perfil_bancario",
+        "page_source_file": "logs/page_source_1756696081.xml"
+    },
+    {
+        "locator": "id=com.itau:id/segregate_config_selector_button",
+        "page_source_file": "logs/page_source_1756696082.xml"
+    },
+    {
+        "locator": "app_itau_logo",
+        "page_source_file": "logs/page_source_1756696090.xml"
+    },
+    {
+        "locator": "id=com.itau:id/segregate_config_selector_button",
+        "page_source_file": "logs/page_source_1756696092.xml"
+    },
+    {
+        "locator": "app_itau_logo",
+        "page_source_file": "logs/page_source_1756696385.xml"
+    },
+    {
+        "locator": "id=com.itau:id/segregate_config_selector_button",
+        "page_source_file": "logs/page_source_1756696386.xml"
+    },
+    {
+        "timestamp": "2025-09-01T00:13:23.091073",
+        "test_name": "Login por AgÃƒÂªncia",
+        "locator": "login_password_field",
+        "error": "Elemento nÃƒÂ£o visÃƒÂ­vel"
+    },
+    {
+        "locator": "login_password_field",
+        "page_source_file": "logs/page_source_1756696403.xml"
+    },
+    {
+        "timestamp": "2025-09-01T00:13:39.623339",
+        "test_name": "Login por AgÃªncia",
+        "locator": "id=com.itau:id/primary_button",
+        "error": "Elemento nÃ£o visÃ­vel para verificaÃ§Ã£o de estado"
+    },
+    {
+        "locator": "main_button_perfil_bancario",
+        "page_source_file": "logs/page_source_1756696442.xml"
+    },
+    {
+        "locator": "id=com.itau:id/segregate_config_selector_button",
+        "page_source_file": "logs/page_source_1756696444.xml"
+    },
+    {
+        "locator": "app_itau_logo",
+        "page_source_file": "logs/page_source_1756696451.xml"
+    },
+    {
+        "locator": "id=com.itau:id/segregate_config_selector_button",
+        "page_source_file": "logs/page_source_1756696452.xml"
+    },
+    {
+        "timestamp": "2025-09-01T00:14:39.253543",
+        "test_name": "Login por Agência",
+        "locator": "id=com.itau:id/alert or com.itau:id/alertBody",
+        "error": "Elemento da tela não visível"
+    }
+]
