@@ -150,3 +150,6 @@ results/
 *.png
 *.gif
 .vscode/settings.json
+
+capabilities.json
+variables.robot
