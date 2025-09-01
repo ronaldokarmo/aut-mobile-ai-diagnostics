@@ -17,14 +17,9 @@ Este projeto demonstra a automação de testes para aplicativos mobile Android u
 ```
 e:\aut-mobile-ai-diagnostics\
 ├───.gitignore
-├───.pylintrc
 ├───README.md
 ├───requirements.txt
 ├───run_test.bat
-├───.git\...
-├───.venv\...
-├───.vscode\
-│   └───settings.json
 ├───ai_diagnostics\
 │   └───locator_analyzer.py
 ├───locators\
@@ -39,18 +34,13 @@ e:\aut-mobile-ai-diagnostics\
 │   ├───capabilities.json
 │   ├───keywords.robot
 │   └───variables.robot
-├───results\
-│   ├───output\...
-│   └───steps\...
 ├───tests\
 │   ├───test_ai_login.robot
 │   ├───android\
 │   │   └───test_new_login.robot
 │   └───ios\
 └───utils\
-    ├───__init__.py
-    ├───inspector.py
-    └───__pycache__\
+    └───inspector.py
 
 ```
 
