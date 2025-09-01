@@ -17,7 +17,6 @@ Este projeto demonstra a automação de testes para aplicativos mobile Android u
 ```
 e:\aut-mobile-ai-diagnostics\
 ├───.gitignore
-├───.gitingnore
 ├───.pylintrc
 ├───README.md
 ├───requirements.txt
