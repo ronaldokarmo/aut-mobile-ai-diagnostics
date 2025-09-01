@@ -11,8 +11,5 @@
     "robotcode.robot.env": {
         "PYTHONPATH": "${workspaceFolder}"
     },
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
-    "python.formatting.provider": "black",
     "editor.formatOnSave": true
 }

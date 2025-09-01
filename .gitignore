@@ -148,3 +148,4 @@ results/
 *.xml
 *.png
 *.gif
+.vscode/settings.json
