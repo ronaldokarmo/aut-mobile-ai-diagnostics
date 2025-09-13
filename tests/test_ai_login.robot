@@ -1,139 +1,107 @@
 *** Settings ***
-Documentation    Testes de Login com análise automática de locators
-Library           AppiumLibrary
-Library           Collections
-Library           String
-Library           Process
-Resource          ../resources/keywords.robot
-Suite Teardown    Executar Analisador de Locators
-Test Setup        Open my App
-Test Teardown     Close my App
+Documentation       Testes de Login com análise automática de locators.
 
-*** Keywords ***
-Executar Analisador de Locators
-    Log    Iniciando análise automática de locators...
-    Run Process    python    ai_diagnostics/locator_analyzer.py
-    Log    Relatório gerado em logs/locator_report.html
+Library             AppiumLibrary
+Library             Collections
+Library             String
+Library             Process
+
+Resource            ../resources/keywords.robot
+Resource            ../resources/app_itau.robot
+
+Test Setup          Abrir Meu App
+Test Teardown       Fechar Meu App
+
 
 *** Variables ***
-${AGENCIA}      1500
-${CONTA}        592363
-${CPF}          12345678909
-${SENHA}        12300001
+${AGENCIA}          1500
+${CONTA}            592363
+${CPF}              15350399144
+${SENHA}            12300001
 
-
-*** Test Cases ***
-Scenario: Login por Agência e Conta :: com Sucesso
-    [Documentation]    Teste de login com sucesso utilizando agência e conta.
-    [Tags]    smoke    login_com_agencia_e_conta
-
-    Wait Until Element Is Visible Intelligence    app_itau_logo
-    Registrar Falha com Page Source    app_itau_logo
-    Log    Elemento de logo visível
-
+*** Keywords ***
+Dado que eu esteja na tela de login
+    Aguardar Elemento Visível Inteligente    app_itau_logo
     Selecionar Ambiente Se Necessario    Homologação AWS
-    Log    Ambiente selecionado se necessário
+    Aguardar Elemento Visível Inteligente    app_itau_button_acesso
+    Clicar Elemento Inteligente    app_itau_button_acesso
 
-    Wait Until Element Is Visible Intelligence    app_itau_button_acesso
-    Click Element Intelligence    app_itau_button_acesso
-    Log    Clicou no botão de Acesso
-
+Efetuar login com agencia e conta
+    [Arguments]    ${AGENCIA}    ${CONTA}
     Selecionar Metodo de Login    app_itau_select_metodo_login    Entre com agência e conta
     Verificar Estado de Elemento Inteligente    login_button_continuar    disabled
-    Log    Método de login selecionado
-
-    Input Text Intelligence    login_field_agencia    ${AGENCIA}
-    Input Text Intelligence    login_field_conta     ${CONTA}
-    Log    Preencheu agência e conta
-    
+    Preencher Texto Inteligente    login_field_agencia    ${AGENCIA}
+    Preencher Texto Inteligente    login_field_conta    ${CONTA}
     Verificar Estado de Elemento Inteligente    login_button_continuar    enabled
-    Click Element Intelligence    login_button_continuar
-    Log    Clicou no botão de Continuar
+    Clicar Elemento Inteligente    login_button_continuar
 
-    Wait Until Element Is Visible Intelligence    login_password_field
-    Registrar Falha com Page Source    login_password_field
-    Log    Navegou para a tela de senha
-
-    Verificar Estado de Elemento Inteligente    login_button_continuar    disabled
-    Enter Smart Password Intelligence    ${SENHA}
-    Log    Digitou a senha
-
-    Verificar Estado de Elemento Inteligente    login_button_continuar    enabled
-    Click Element Intelligence    login_button_continuar
-    Log    Clicou no botão de Continuar
-
-    Aguardar Pela Home Tratando Popups
-    Registrar Falha com Page Source    main_button_perfil_bancario
-    Log    Aguardando pela tela inicial
-
-Scenario: Login por CPF :: com Sucesso
-    [Documentation]    Teste de login com sucesso utilizando CPF.
-    [Tags]    smoke    login_com_cpf
-
-    Wait Until Element Is Visible Intelligence    app_itau_logo
-    Registrar Falha com Page Source    main_button_perfil_bancario
-    Log    Elemento de logo visível
-
-    Selecionar Ambiente Se Necessario    app_itau_select_ambiente    Homologação AWS
-    Log    Ambiente selecionado se necessário
-
-    Wait Until Element Is Visible Intelligence    login_button_acesso
-    Registrar Falha com Page Source    login_button_acesso
-    Click Element Intelligence    login_button_acesso
-    Log    Clicou no botão de Acesso
-
+Efetuar login com CPF
+    [Arguments]    ${CPF}
     Selecionar Metodo de Login    app_itau_select_metodo_login    Entre com seu CPF
     Verificar Estado de Elemento Inteligente    login_button_continuar    disabled
-    Log    Método de login selecionado
-
-    Input Text Intelligence    login_field_cpf    ${CPF}
-    Log    Preencheu CPF
-
+    Preencher Texto Inteligente    login_field_cpf    ${CPF}
     Verificar Estado de Elemento Inteligente    login_button_continuar    enabled
-    Click Element Intelligence    login_button_continuar
-    Log    Clicou no botão de Continuar
+    Clicar Elemento Inteligente    login_button_continuar
 
-    Wait Until Element Is Visible Intelligence    login_password_field
-    Log    Navegou para a tela de senha
-
+Digitar a senha virtual
+    [Arguments]    ${SENHA}
+    Aguardar Elemento Visível Inteligente    login_display_password
     Verificar Estado de Elemento Inteligente    login_button_continuar    disabled
-    Enter Smart Password Intelligence    ${SENHA}
-    Log    Digitou a senha
-
+    Digitar Senha Inteligente Virtual    ${SENHA}
     Verificar Estado de Elemento Inteligente    login_button_continuar    enabled
-    Click Element Intelligence    login_button_continuar
-    Log    Clicou no botão de Continuar
+    Clicar Elemento Inteligente    login_button_continuar
 
-    Aguardar Pela Home Tratando Popups
-    Registrar Falha com Page Source    main_button_perfil_bancario
-    Log    Aguardando pela tela inicial
+Digitar a senha
+    [Arguments]    ${SENHA}
+    Aguardar Elemento Visível Inteligente    login_display_password
+    Verificar Estado de Elemento Inteligente    login_button_continuar    disabled
+    Digitar Senha Inteligente    login_password_field_keyword_number    ${SENHA}
+    Verificar Estado de Elemento Inteligente    login_button_continuar    enabled
+    Clicar Elemento Inteligente    login_button_continuar
 
-Scenario: Login por Agência e Conta :: com Interrompido por Instabilidade
+E o login seja efetuado com sucesso
+    Verificar Tela Principal Após Login
+
+E a tela de instabilidade seja exibida
+    Aguardar Elemento Visível Inteligente    login_display_perdemos_conexao
+    Verificar Estado de Elemento Inteligente    login_button_tentar_novamente    enabled
+    Clicar Elemento Inteligente    login_button_tentar_novamente
+    Simular Instabilidade de Rede
+    Aguardar Elemento Visível Inteligente    login_display_estamos_instabilidade
+
+*** Test Cases ***
+Scenario: Login por Agência e Conta com Sucesso
+    [Documentation]    Teste de login com sucesso utilizando agência e conta.
+    [Tags]    login_com_agconta
+
+    Dado que eu esteja na tela de login
+    Efetuar login com agencia e conta    ${AGENCIA}    ${CONTA}
+    Digitar a senha virtual    ${SENHA}
+    E o login seja efetuado com sucesso
+
+Scenario: Login por CPF com Sucesso
+    [Documentation]    Teste de login com sucesso utilizando CPF.
+    [Tags]    login_com_cpf
+
+    Dado que eu esteja na tela de login
+    Efetuar login com CPF    ${CPF}
+    Digitar a senha    ${SENHA}
+    E o login seja efetuado com sucesso
+
+Scenario: Login por Agência e Conta com Instabilidade
     [Documentation]    Teste de login com instabilidade utilizando agência e conta.
-    [Tags]    regressao    login_negativo
+    [Tags]    login_instabilidade
 
-    Wait Until Element Is Visible Intelligence    app_itau_logo
-    Registrar Falha com Page Source    app_itau_logo
-    Log    Elemento de logo visível
+    Dado que eu esteja na tela de login
+    Efetuar login com agencia e conta    ${AGENCIA}    ${CONTA}
+    E a tela de instabilidade seja exibida
 
-    Selecionar Ambiente Se Necessario    Homologação AWS
-    Log    Ambiente selecionado se necessário
+Scenario: Login por CPF com Instabilidade
+    [Documentation]    Teste de login com instabilidade utilizando CPF.
+    [Tags]    login_instabilidade
 
-    Wait Until Element Is Visible Intelligence    app_itau_button_acesso
-    Click Element Intelligence    app_itau_button_acesso
-    Log    Clicou no botão de Acesso
+    Dado que eu esteja na tela de login
+    Efetuar login com CPF    ${CPF}
+    Digitar a senha    ${SENHA}
+    E a tela de instabilidade seja exibida
 
-    Selecionar Metodo de Login    app_itau_select_metodo_login    Entre com agência e conta
-    Verificar Estado de Elemento Inteligente    login_button_continuar    disabled
-    Log    Método de login selecionado
-
-    Input Text Intelligence    login_field_agencia    ${AGENCIA}
-    Input Text Intelligence    login_field_conta     ${CONTA}
-    Log    Preencheu agência e conta
-    
-    Verificar Estado de Elemento Inteligente    login_button_continuar    enabled
-    Click Element Intelligence    login_button_continuar
-    Log    Clicou no botão de Continuar
-
-    Validar Tela com Múltiplos Elementos Inteligente    login_display_instabilidades
-    Log    Verificou mensagem de instabilidade
