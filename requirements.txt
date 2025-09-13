@@ -1,7 +1,8 @@
 robotframework==7.3.2
 robotframework-appiumlibrary==3.1
+robotframework-jsonlibrary
 Appium-Python-Client==5.1.1
 pytest==8.4.1
-pylint
-black
-robotframework-jsonlibrary
+pylint==2.17.5
+black==23.3.0
+
